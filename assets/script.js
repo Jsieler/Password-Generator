@@ -16,6 +16,7 @@ function getInput() {
   else if (passwordLength > 128) {
     alert("maximum allowed characters is 128!")
   }
+  
   // confirm prompts for password characters to be included 
   var lowerPrompt = confirm("Click OK, to include lowercase letters");
   var upperPrompt = confirm("Click OK, to include UPPERCASE letters");
@@ -42,25 +43,25 @@ function generatePassword() {
   length = userChoices.length;
   massArray = []
   if (userChoices.uppercase) {
-    pwd += randomizer(2, upperCase);
+    pwd += randomizer(1, upperCase);
     massArray = massArray.concat(upperCase);
     console.log(massArray);
     length -= 1;
   }
   if (userChoices.lowercase) {
-    pwd += randomizer(2, lowerCase);
+    pwd += randomizer(1, lowerCase);
     massArray = massArray.concat(lowerCase);
     console.log(massArray);
     length -= 1;
   }
   if (userChoices.numbers) {
-    pwd += randomizer(2, numbersChar);
+    pwd += randomizer(1, numbersChar);
     massArray = massArray.concat(numbersChar);
     console.log(massArray);
     length -= 1;
   }
   if (userChoices.special) {
-    pwd += randomizer(2, specialChar);
+    pwd += randomizer(1,specialChar);
     massArray = massArray.concat(specialChar);
     console.log(massArray);
     length -= 1;
