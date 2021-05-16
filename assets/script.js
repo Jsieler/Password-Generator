@@ -6,6 +6,7 @@ var specialChar = ['!', '"', '#', '$', '%', '&', '(', ')', '.', '+', ',', '-', '
 var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
+// function to gather user preference for password length 
 function getInput() {
   var passwordLength = parseInt(
     prompt("Please input desired password length between 8 and 128 characters!"));
@@ -41,25 +42,25 @@ function generatePassword() {
   length = userChoices.length;
   massArray = []
   if (userChoices.uppercase) {
-    pwd += randomizer(1, upperCase);
+    pwd += randomizer(2, upperCase);
     massArray = massArray.concat(upperCase);
     console.log(massArray);
     length -= 1;
   }
   if (userChoices.lowercase) {
-    pwd += randomizer(1, lowerCase);
+    pwd += randomizer(2, lowerCase);
     massArray = massArray.concat(lowerCase);
     console.log(massArray);
     length -= 1;
   }
   if (userChoices.numbers) {
-    pwd += randomizer(1, numbersChar);
+    pwd += randomizer(2, numbersChar);
     massArray = massArray.concat(numbersChar);
     console.log(massArray);
     length -= 1;
   }
   if (userChoices.special) {
-    pwd += randomizer(1, specialChar);
+    pwd += randomizer(2, specialChar);
     massArray = massArray.concat(specialChar);
     console.log(massArray);
     length -= 1;
